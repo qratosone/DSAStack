@@ -224,6 +224,12 @@ public:
         }
         std::cout << std::endl;
     }
+	void showEndl() {
+		for (int i = 0; i < _size; i++)
+		{
+			std::cout << _elem[i] <<std::endl;
+		}
+	}
     void merge(Rank lo, Rank mi, Rank hi) {
         T* A = _elem + lo; //合并后的向量A[0, hi - lo) = _elem[lo, hi)
 		long n = mi - lo ;

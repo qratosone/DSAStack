@@ -1,15 +1,20 @@
-#pragma once
+
 #include "MyVector.h"
+
 template <typename T>
 class Stack:public MyVector<T>
 {
-public:
+	public:
 	Stack() {};
 	~Stack() {};
-	void push(T const & e) { insert(getSize(), e); }  //入栈
-	T pop() { return remove(getSize() - 1); }  //出栈
-	
+	void push(T const & e)
+	{ 
+		insert(getSize(), e); 
+		
+	}  //入栈
+	T pop() {  return remove(getSize() - 1); }  //出栈
+	int StackLen() { return getSize(); }
 private:
-
+	
 };
 
