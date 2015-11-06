@@ -4,6 +4,7 @@ typedef int Rank;
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+using namespace std;
 template <typename T>class MyVector {
 public:
     MyVector(int c = DEFAULT_CAPACITY) {
@@ -217,6 +218,19 @@ public:
         mergeSort(lo, mi); mergeSort(mi, hi); //分别排序
         merge(lo, mi, hi); //归并
     }
+	void printStack() {
+		for (int i = 0; i < _size; i++)
+		{
+			if (_elem[i]==1)
+			{
+				cout << "push" << endl;
+			}
+			else if(_elem[i]==0)
+			{
+				cout << "pop" << endl;
+			}
+		}
+	}
     void show() {
         for (int i = 0; i < _size; i++)
         {
